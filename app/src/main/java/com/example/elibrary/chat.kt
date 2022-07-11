@@ -21,24 +21,13 @@ class chat : AppCompatActivity() {
                     finish()
                 }
 
-                R.id.ic_listbook -> {
-                    startActivity(Intent(this, listbook::class.java))
-                    overridePendingTransition(0, 0);
-                    finish()
-                }
-                R.id.ic_peminjaman -> {
-                    startActivity(Intent(this, peminjaman::class.java))
-                    overridePendingTransition(0, 0);
-                    finish()
-
-                }
                 R.id.ic_account -> {
                     startActivity(Intent(this, account::class.java))
                     overridePendingTransition(0, 0);
                     finish()
                 }
                 R.id.ic_chat -> {
-
+                    startActivity(Intent(this, chat::class.java))
                     overridePendingTransition(0, 0);
 
                 }

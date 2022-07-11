@@ -5,14 +5,23 @@
         android:icon="@drawable/ic_baseline_home_24"
         android:title=""/>
 
+    <!--
     <item
         android:id="@+id/ic_listbook"
         android:icon="@drawable/ic_baseline_menu_book_24"
         android:title=""/>
+    -->
 
+    <!--
     <item
         android:id="@+id/ic_peminjaman"
         android:icon="@drawable/ic_baseline_history_edu_24"
+        android:title=""/>
+      -->
+
+    <item
+        android:id="@+id/ic_chat"
+        android:icon="@drawable/ic_baseline_message_24"
         android:title=""/>
 
     <item
@@ -20,9 +29,6 @@
         android:icon="@drawable/ic_baseline_person_24"
         android:title=""/>
 
-    <item
-        android:id="@+id/ic_chat"
-        android:icon="@drawable/ic_baseline_message_24"
-        android:title=""/>
+
 
 </menu>
