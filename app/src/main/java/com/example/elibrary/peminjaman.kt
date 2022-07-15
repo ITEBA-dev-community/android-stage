@@ -21,23 +21,30 @@ class peminjaman : AppCompatActivity() {
                     finish()
                 }
 
-                R.id.ic_account -> {
-                    startActivity(Intent(this, account::class.java))
-                    overridePendingTransition(0, 0);
-                    finish()
+               
+                R.id.ic_peminjaman -> {
+                    startActivity(Intent(this, peminjaman::class.java))
+                    overridePendingTransition(0,0)
+
                 }
                 R.id.ic_chat -> {
                     startActivity(Intent(this, chat::class.java))
                     overridePendingTransition(0, 0);
                     finish()
                 }
+
+                R.id.ejurnal -> {
+                    startActivity(Intent(this, ejurnal::class.java))
+                    overridePendingTransition(0,0)
+                }
             }
             true
         }
 
         val webview5 = findViewById<WebView>(R.id.webviewpeminjaman)
-        webview5.loadUrl("https://ikariegroup.co.id/peminjaman.php")
+        webview5.loadUrl("https://ikariegroup.co.id/historypinjam.php")
         webview5.webViewClient = WebViewClient()
+        webview5.settings.domStorageEnabled = true
         webview5.settings.javaScriptEnabled = true
 
 

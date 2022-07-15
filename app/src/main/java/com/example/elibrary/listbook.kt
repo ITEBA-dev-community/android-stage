@@ -21,11 +21,19 @@ class listbook : AppCompatActivity() {
                     finish()
                 }
 
-                R.id.ic_account -> {
-                    startActivity(Intent(this, account::class.java))
-                    overridePendingTransition(0, 0);
+                R.id.ic_peminjaman -> {
+                    startActivity(Intent(this, peminjaman::class.java))
+                    overridePendingTransition(0,0)
                     finish()
+
                 }
+
+                R.id.ejurnal -> {
+                    startActivity(Intent(this, ejurnal::class.java))
+                    overridePendingTransition(0,0)
+                }
+
+
                 R.id.ic_chat -> {
                     startActivity(Intent(this, chat::class.java))
                     overridePendingTransition(0, 0);
@@ -38,6 +46,7 @@ class listbook : AppCompatActivity() {
         val webview4 = findViewById<WebView>(R.id.webviewlistbook)
         webview4.loadUrl("https://ikariegroup.co.id/listbook.php")
         webview4.webViewClient = WebViewClient()
+        webview4.settings.domStorageEnabled = true
         webview4.settings.javaScriptEnabled = true
 
     }
