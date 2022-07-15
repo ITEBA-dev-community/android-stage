@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".account">
 
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/botnavigation"
         android:layout_width="match_parent"
@@ -13,11 +23,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:background="@color/black"
+        android:background="#FFF2F4F8"
         app:menu="@menu/navigation"
-        app:itemIconTint="@color/white"
+        app:itemIconTint="@color/black"
         app:labelVisibilityMode="unlabeled"
-        app:itemTextColor="@color/white"/>
+        app:itemTextColor="@color/black"/>
+
+    </androidx.cardview.widget.CardView>
 
 
 

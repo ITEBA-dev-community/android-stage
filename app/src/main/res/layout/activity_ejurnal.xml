@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".listbook">
+    tools:context=".ejurnal">
+
 
 
     <androidx.cardview.widget.CardView
@@ -31,10 +32,16 @@
 
     </androidx.cardview.widget.CardView>
 
-    <WebView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/webviewlistbook"/>
+
+
+    <!--webview -->
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/webviewejurnal"/>
+
+    <!-- webview -->
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -30,16 +30,21 @@ class MainActivity : AppCompatActivity() {
 
                 }
 
-                R.id.ic_account -> {
-                    startActivity(Intent(this, account::class.java))
-                    overridePendingTransition(0, 0);
-                    finish()
-                }
-
 
                 R.id.ic_chat -> {
                     startActivity(Intent(this, chat::class.java))
                     overridePendingTransition(0, 0);
+                    finish()
+                }
+
+                R.id.ejurnal -> {
+                    startActivity(Intent(this, ejurnal::class.java))
+                    overridePendingTransition(0,0)
+                }
+
+                R.id.ic_peminjaman -> {
+                    startActivity(Intent(this, peminjaman::class.java))
+                    overridePendingTransition(0,0)
                     finish()
                 }
             }
@@ -49,6 +54,7 @@ class MainActivity : AppCompatActivity() {
         val webviewhome = findViewById<WebView>(R.id.webview1)
         webviewhome.loadUrl("https://ikariegroup.co.id/home.php")
         webviewhome.webViewClient = WebViewClient()
+        webviewhome.settings.domStorageEnabled = true
         webviewhome.settings.javaScriptEnabled = true
 
 

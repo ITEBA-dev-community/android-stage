@@ -7,13 +7,13 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class chat : AppCompatActivity() {
+class ejurnal : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_chat)
+        setContentView(R.layout.activity_ejurnal)
 
-            val bottomnavigation = findViewById<BottomNavigationView>(R.id.botnavigation)
-            bottomnavigation.setOnNavigationItemSelectedListener {
+        val bottomnavigation = findViewById<BottomNavigationView>(R.id.botnavigation)
+        bottomnavigation.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.ic_home -> {
                     startActivity(Intent(this, MainActivity::class.java))
@@ -25,6 +25,7 @@ class chat : AppCompatActivity() {
                     startActivity(Intent(this, peminjaman::class.java))
                     overridePendingTransition(0,0)
                     finish()
+
                 }
 
                 R.id.ejurnal -> {
@@ -33,21 +34,27 @@ class chat : AppCompatActivity() {
                 }
 
 
-
                 R.id.ic_chat -> {
                     startActivity(Intent(this, chat::class.java))
                     overridePendingTransition(0, 0);
-
+                    finish()
                 }
             }
             true
         }
 
-        val webview3 = findViewById<WebView>(R.id.webviewchat)
-        webview3.loadUrl("https://ikariegroup.co.id/chat.php")
-        webview3.webViewClient = WebViewClient()
-        webview3.settings.domStorageEnabled = true
-        webview3.settings.javaScriptEnabled = true
+        val webviewjurnal = findViewById<WebView>(R.id.webviewejurnal)
+        webviewjurnal.loadUrl("https://ikariegroup.co.id/ejurnal.php")
+        webviewjurnal.webViewClient = WebViewClient()
+        webviewjurnal.settings.domStorageEnabled = true
+        webviewjurnal.settings.javaScriptEnabled = true
+
+
+
+
+
 
     }
+
+
 }
