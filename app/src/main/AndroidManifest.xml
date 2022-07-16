@@ -19,18 +19,23 @@
         android:theme="@style/Theme.Elibrary"
         tools:targetApi="31">
         <activity
+            android:windowSoftInputMode="adjustPan"
             android:name=".ejurnal"
             android:exported="false" />
         <activity
+            android:windowSoftInputMode="adjustPan"
             android:name=".chat"
             android:exported="false" />
         <activity
+            android:windowSoftInputMode="adjustPan"
             android:name=".account"
             android:exported="false" />
         <activity
+            android:windowSoftInputMode="adjustPan"
             android:name=".peminjaman"
             android:exported="false" />
         <activity
+            android:windowSoftInputMode="adjustPan"
             android:name=".listbook"
             android:exported="false" />
         <activity
@@ -44,6 +49,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
+            android:windowSoftInputMode="adjustPan"
             android:exported="false" />
     </application>
 
