@@ -4,6 +4,7 @@ import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -49,6 +50,7 @@ class ejurnal : AppCompatActivity() {
         val webviewjurnal = findViewById<WebView>(R.id.webviewejurnal)
         webviewjurnal.loadUrl("https://ikariegroup.co.id/ejurnal.php")
         webviewjurnal.webViewClient = WebViewClient()
+        webviewjurnal.webChromeClient = WebChromeClient()
         webviewjurnal.settings.domStorageEnabled = true
         webviewjurnal.settings.javaScriptEnabled = true
 

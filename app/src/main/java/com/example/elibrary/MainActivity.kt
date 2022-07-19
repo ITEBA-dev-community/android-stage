@@ -5,6 +5,7 @@ package com.example.elibrary
 import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
+import android.webkit.WebChromeClient
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
@@ -20,7 +21,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
 
         // ini deprecated sen on nya, bikin force exit
 
@@ -59,6 +59,7 @@ class MainActivity : AppCompatActivity() {
         val webviewhome = findViewById<WebView>(R.id.webview1)
         webviewhome.loadUrl("https://ikariegroup.co.id/home.php")
         webviewhome.webViewClient = WebViewClient()
+        webviewhome.webChromeClient = WebChromeClient()
         webviewhome.settings.domStorageEnabled = true
         webviewhome.settings.javaScriptEnabled = true
         webviewhome.settings.setPluginState(WebSettings.PluginState.ON);

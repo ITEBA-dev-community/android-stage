@@ -2,12 +2,14 @@ package com.example.elibrary
 
 import android.app.AlertDialog
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlin.system.exitProcess
+
 
 class account : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,6 +52,7 @@ class account : AppCompatActivity() {
         val webview2 = findViewById<WebView>(R.id.webviewaccount)
         webview2.loadUrl("https://ikariegroup.co.id/account.php")
         webview2.webViewClient = WebViewClient()
+        webview2.webChromeClient = WebChromeClient()
         webview2.settings.domStorageEnabled = true
         webview2.settings.javaScriptEnabled = true
 
