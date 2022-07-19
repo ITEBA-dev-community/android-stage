@@ -4,6 +4,7 @@ import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -50,6 +51,7 @@ class chat : AppCompatActivity() {
         val webview3 = findViewById<WebView>(R.id.webviewchat)
         webview3.loadUrl("https://ikariegroup.co.id/chat.php")
         webview3.webViewClient = WebViewClient()
+        webview3.webChromeClient = WebChromeClient()
         webview3.settings.domStorageEnabled = true
         webview3.settings.javaScriptEnabled = true
 

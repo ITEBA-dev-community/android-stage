@@ -4,6 +4,7 @@ import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -48,6 +49,7 @@ class peminjaman : AppCompatActivity() {
         val webview5 = findViewById<WebView>(R.id.webviewpeminjaman)
         webview5.loadUrl("https://ikariegroup.co.id/historypinjam.php")
         webview5.webViewClient = WebViewClient()
+        webview5.webChromeClient = WebChromeClient()
         webview5.settings.domStorageEnabled = true
         webview5.settings.javaScriptEnabled = true
 
